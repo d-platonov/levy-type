@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 import numpy as np
 
 from levy_type.base_process import BaseProcess

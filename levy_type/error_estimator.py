@@ -2,17 +2,15 @@ from dataclasses import dataclass, field
 
 import numpy as np
 import pandas as pd
-from levy_type.process_simulator import Path, ProcessSimulator
-from levy_type.simulation_config import SimulationConfig
 
 from levy_type.base_process import BaseProcess
 from levy_type.process_factory import ProcessFactory
+from levy_type.process_simulator import Path, ProcessSimulator
+from levy_type.simulation_config import SimulationConfig
 
 
 @dataclass
 class ErrorEstimator:
-    """Error estimator."""
-
     config: SimulationConfig
     k_values: list[int]
     p_values: list[int]
@@ -21,7 +19,6 @@ class ErrorEstimator:
     simulator: ProcessSimulator = field(init=False)
 
     def __post_init__(self) -> None:
-        """Init process and simulator."""
         self.process = ProcessFactory.create_process(config=self.config)
         self.simulator = ProcessSimulator(process=self.process, k_values=self.k_values)
 

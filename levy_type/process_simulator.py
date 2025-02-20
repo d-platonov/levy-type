@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from functools import cached_property
 
 import numpy as np
+
 from levy_type.base_process import BaseProcess, JumpSign
 
 

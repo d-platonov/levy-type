@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from enum import IntEnum
 
 import numpy as np
+
 from levy_type.simulation_config import SimulationConfig
 
 

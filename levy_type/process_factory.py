@@ -1,7 +1,8 @@
 from levy_type.ar_process import ARProcess
 from levy_type.base_process import BaseProcess
 from levy_type.dc_process import DCProcess
-from levy_type.simulation_config import SimulationConfig, SimulationConfigAR, SimulationConfigDC
+from levy_type.simulation_config import (SimulationConfig, SimulationConfigAR,
+                                         SimulationConfigDC)
 
 
 class ProcessFactory:
