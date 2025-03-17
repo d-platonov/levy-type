@@ -35,3 +35,4 @@ $$
 - **`process_simulator.py`** – Simulation of benchmark and coarse paths.
 - **`error_estimator.py`** – Estimation of strong errors.
 - **`main.py`** – Main script to run simulations and comparisons.
+- **`run_numba.py`** – Fast script to run simulations and comparisons (in batches).
