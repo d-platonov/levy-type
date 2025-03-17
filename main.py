@@ -3,7 +3,7 @@ from levy_type.simulation_config import SimulationConfigAR, SimulationConfigDC
 
 
 def main() -> None:
-    """Run error estimation."""
+    """Run error estimation example."""
     alpha = 0.5
     seed = 2025
     n_paths = 10
@@ -18,7 +18,7 @@ def main() -> None:
     )
     estimator = ErrorEstimator(
         config=config_ar,
-        k_values=[4, 8, 16, 32, 64, 128, 256],
+        k_values=[2, 4, 8, 16, 32, 64, 128, 256],
         p_values=[2, 4, 6, 8, 10],
         n_paths=n_paths,
     )
@@ -29,7 +29,7 @@ def main() -> None:
     config_dc = SimulationConfigDC(
         total_time=1.0,
         num_steps=int(2**17),
-        h=5.05e-13,
+        h=6.810e-13,
         eps=0.10,
         x_0=0.0,
         alpha=alpha,
@@ -37,12 +37,12 @@ def main() -> None:
     )
     estimator = ErrorEstimator(
         config=config_dc,
-        k_values=[4, 8, 16, 32, 64, 128, 256],
+        k_values=[2, 4, 8, 16, 32, 64, 128, 256],
         p_values=[2, 4, 6, 8, 10],
         n_paths=n_paths,
     )
     result_dc = estimator.estimate_error()
-    print("\nDC, eps = 0.10, h = 5.05e-13")
+    print("\nDC, eps = 0.10, h = 6.810e-13")
     print(result_dc)
 
 
